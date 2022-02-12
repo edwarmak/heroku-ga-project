@@ -6,7 +6,7 @@
 //___________________
 const express = require('express');
 const methodOverride  = require('method-override');
-const mongoose = require ('mongoose');
+const mongoose = require('mongoose');
 // controller for vehicles index
 const vehiclesController = require('./controllers/vehicles.js')
 const app = express ();
@@ -23,11 +23,6 @@ const PORT = process.env.PORT || 3003;
 //___________________
 // How to connect to the database either via heroku or locally
 const MONGODB_URI = process.env.MONGODB_URI;
-
-// Connect to Mongo &
-// Fix Depreciation Warnings from Mongoose
-// May or may not need these depending on your Mongoose version
-mongoose.connect(MONGODB_URI);
 
 // Error / success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
@@ -70,4 +65,10 @@ app.get('/' , (req, res) => {
 //___________________
 //Listener
 //___________________
+
+// Connect to Mongo &
+// Fix Depreciation Warnings from Mongoose
+// May or may not need these depending on your Mongoose version
+mongoose.connect(MONGODB_URI);
+
 app.listen(PORT, () => console.log( 'Listening on port:', PORT));

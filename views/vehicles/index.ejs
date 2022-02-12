@@ -14,5 +14,15 @@
         </ul>
       </nav>
     </header>
+    <main>
+      <h2>List of Vehicles</h2>
+      <ul>
+        <% for(let i = 0; i < vehicles.length; i++){ %>
+          <li>
+            <a href="/vehicles/<%=vehicles[i]._id%>"><%=vehicles[i].name%></a>
+          </li>
+        <% } %>
+      </ul>
+    </main>
   </body>
 </html>

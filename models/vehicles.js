@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-// defining schema for vehicles entered 
+// defining schema for vehicles entered
 const vehicleSchema = mongoose.Schema({
   make: { type: String, required:true },
   model: { type: String, required:true },
@@ -9,6 +9,6 @@ const vehicleSchema = mongoose.Schema({
   mileage: { type: Number, required:true}
 })
 
-const Vehicle = mongoose.Model('Vehicle', vehicleSchema)
+const Vehicle = mongoose.model('Vehicle', vehicleSchema)
 
 module.exports = Vehicle
