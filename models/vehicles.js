@@ -4,9 +4,9 @@ const mongoose = require('mongoose')
 const vehicleSchema = mongoose.Schema({
   make: { type: String, required:true },
   model: { type: String, required:true },
-  year: { type: String, required: true },
+  year: { type: Number, required: true },
   color: { type: String },
-  mileage: { type: String, required:true}
+  mileage: { type: Number, required:true}
 })
 
 const Vehicle = mongoose.model('Vehicle', vehicleSchema)

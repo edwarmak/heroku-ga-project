@@ -23,9 +23,9 @@
 			<form action="/vehicles/<%=vehicle._id%>?_method=PUT" method="POST">
         Make: <input type="text" name="make" value="<%=vehicle.make%>"/><br/>
         Model: <input type="text" name="model" value="<%=vehicle.model%>"/><br/>
-        Year: <input type="text" name="year" value="<%=vehicle.year%>"/><br/>
+        Year: <input type="number" name="year" value="<%=vehicle.year%>"/><br/>
         Color: <input type="text" name="color" value="<%=vehicle.color%>"/><br/>
-        Current Mileage: <input type="text" name="mileage" value="<%=vehicle.mileage%>"/><br/>
+        Current Mileage: <input type="number" name="mileage" value="<%=vehicle.mileage%>"/><br/>
 				<input type="submit" value="Update Vehicle"/>
 			</form>
 		</main>
