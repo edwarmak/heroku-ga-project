@@ -9,6 +9,8 @@ const methodOverride  = require('method-override');
 const mongoose = require('mongoose');
 // controller for vehicles index
 const vehiclesController = require('./controllers/vehicles.js')
+const servicesController = require('./controllers/services.js');
+
 const app = express ();
 const db = mongoose.connection;
 require('dotenv').config()
@@ -46,6 +48,9 @@ app.use(methodOverride('_method'));
 
 // use vehicle controller
 app.use('/vehicles', vehiclesController)
+
+// use services controller
+app.use('/services', servicesController);
 
 //___________________
 // Routes

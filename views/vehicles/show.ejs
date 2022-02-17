@@ -4,26 +4,26 @@
 		<meta charset="utf-8">
 		<title></title>
 	</head>
+		<nav>
+	    <ul>
+	      <li>
+	        <a href="/">Home</a>
+	      </li>
+	      <li>
+	        <a href="/vehicles">Vehicle Index</a>
+	      </li>
+	    </ul>
+	  </nav>
 	<body>
 		<header>
-			<h1>Show Page</h1>
-			<nav>
-				<ul>
-					<li>
-						<a href="/">Home</a>
-					</li>
-					<li>
-						<a href="/vehicles">Vehicle Index</a>
-					</li>
-				</ul>
-			</nav>
+			<h1>Information on your <%=vehicle.make%></h1>
 		</header>
 		<main>
 			<section>
-				<h2>Vehicle Attributes:</h2>
+				<h2><%=vehicle.year%> <%=vehicle.make%> <%=vehicle.model%></h2>
 				<ul>
-					<li>Make:</li>
-        	<!-- add other vehicle info -->
+					<li>recent services</li>
+					<li>link to view all services for this vehicle</li>
 				</ul>
 			</section>
 		</main>

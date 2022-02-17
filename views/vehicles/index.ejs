@@ -1,4 +1,3 @@
-<!-- VEHICLE INDEX.EJS -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -8,22 +7,13 @@
   <body>
     <header>
       <h1>View Vehicles Page</h1>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/vehicles/edit">Edit Vehicle</a></li>
-          <li><a href="/vehicles/new">Add Vehicle</a></li>
-          <li><a href="/vehicles/show">Show Vehicle</a></li>
-          <li><a href="/vehicles/index">Created Vehicle</a></li>
-        </ul>
-      </nav>
     </header>
     <main>
       <h2>List of Vehicles</h2>
       <ul>
         <% for(let i = 0; i < vehicles.length; i++){ %>
           <li>
-            <a href="/vehicles/<%=vehicles[i]._id%>"><%=vehicles[i].name%></a>
+            <a href="/vehicles/<%=vehicles[i].id%>"><%=vehicles[i].year%> <%=vehicles[i].make%> <%=vehicles[i].model%></a>
           </li>
         <% } %>
       </ul>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <nav>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/services">Services</a>
+      </li>
+    </ul>
+  </nav>
+  <body>
+    <header>
+      <h1>Services</h1>
+      <li>
+        <a href="/services/new">Add New Service</a>
+      </li>
+    </header>
+    <main>
+      <h2>List of Services</h2>
+      <ul>
+        <% for(let i = 0; i < services.length; i++){ %>
+			<li>
+				<a href="/services/<%=services[i]._id%>"><%=services[i].description%></a>
+			</li>
+		<% } %>
+      </ul>
+    </main>
+  </body>
+</html>

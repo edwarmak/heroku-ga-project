@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/services">Services</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+    	<h1>Edit <%=service.description%>'s Info</h1>
+		<main>
+      <form action="/services" method="POST">
+        Service Description <input type="text" name="description" value="<%=service.description%>"/><br/>
+        Mileage Completed <input type="number" name="mileage" value="<%=service.mileage%>"/><br/>
+        Date Completed <input type="date" name="date" value="<%=service.date%>"/><br/>
+        Location of Service <input type="text" name="location" value="<%=service.location%>"/><br/>
+        <input type="submit" value="Update Service"/>
+      </form>
+		</main>
+	</body>
+</html>

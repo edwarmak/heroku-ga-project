@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <nav>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/services">Services</a>
+      </li>
+    </ul>
+  </nav>
+  <body>
+    <header>
+      <h1><%=service.description%></h1>
+    </header>
+    <main>
+      <section>
+        <%=service.mileage%>
+        <%=service.date%>
+        <%=service.location%>
+      </section>
+      <section>
+        <form action="/services/<%=service._id%>?_method=DELETE" method="post">
+          <input type="submit" value="Delete Service"/>
+        </form>
+      </section>
+      <section>
+        <a href="/services/<%=service._id%>/edit">Edit Service</a>
+      </section>
+    </main>
+  </body>
+</html>
