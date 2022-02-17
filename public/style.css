@@ -1,0 +1,12 @@
+* {
+  background-color: #666370;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link {
+  color: #000500;
+}
