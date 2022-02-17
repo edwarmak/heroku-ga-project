@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
   </head>
   <header>
     <nav class="nav-bar">
@@ -20,18 +19,18 @@
   </header>
   <body>
     <div class="">
-      <h1>Services</h1>
-      <a href="/services/new">Add New Service</a>
+      <h1></h1>
     </div>
     <main>
-      <h2>List of Services</h2>
-      <ul>
-        <% for(let i = 0; i < services.length; i++){ %>
-			<li>
-				<a href="/services/<%=services[i]._id%>"><%=services[i].description%></a>
-			</li>
-		<% } %>
-      </ul>
+      <h2>Services Performed</h2>
+        <ul>
+          <% for(let i = 0; i < services.length; i++){ %>
+			      <li>
+				      <a href="/services/<%=services[i]._id%>"><%=services[i].category%></a>
+			      </li>
+		      <% } %>
+        </ul>
+      <a href="/services/new">Add New Service</a>
     </main>
   </body>
 </html>

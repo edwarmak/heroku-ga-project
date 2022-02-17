@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
   </head>
   <header>
     <nav class="nav-bar">
@@ -22,20 +21,20 @@
     <h1>Add Service to Record</h1>
     <main>
       <form action="/services" method="POST">
-        Vehicle <select name="vehicleId">
+        Select Vehicle <select name="vehicleId">
           <% for(let i = 0; i < vehicles.length; i++) { %>
-            <option value="<%=vehicles[i]._id%>"><%=vehicles[i].make%></option>
+            <option value="<%=vehicles[i]._id%>"><%=vehicles[i].year%> <%=vehicles[i].make%> <%=vehicles[i].model%></option>
           <% } %>
-        </select>
+        </select><br/>
         Category <select name="category">
           <% for(let i = 0; i < categories.length; i++) { %>
             <option value="<%=categories[i]%>"><%=categories[i]%></option>
           <% } %>
-        </select>
-        Service Description <input type="text" name="description"/>
-        Mileage Completed <input type="number" name="mileage"/>
-        Date Completed <input type="date" name="date"/>
-        Location of Service <input type="text" name="location"/>
+        </select><br/>
+        Service Description <input type="text" name="description"/><br/>
+        Mileage Completed <input type="number" name="mileage"/><br/>
+        Date Completed <input type="date" name="date"/><br/>
+        Location of Service <input type="text" name="location"/><br/>
         <input type="submit" value="Add Service"/>
       </form>
     </main>

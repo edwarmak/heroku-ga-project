@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
   </head>
   <header>
     <nav class="nav-bar">
@@ -19,13 +18,13 @@
     </nav>
   </header>
   <body>
-  <h1><%=service.category%></h1>
     <main>
+      <h2><%=service.description%></h2>
       <section>
-        <%=service.description%><br/>
-        <%=service.mileage%><br/>
-        <%=service.date%><br/>
-        <%=service.location%><br/>
+        Service Description: <%=service.description%><br/>
+        Mileage Performed: <%=service.mileage%><br/>
+        Date Performed: <%=service.date%><br/>
+        Service Location: <%=service.location%><br/>
       </section>
       <section>
         <form action="/services/<%=service._id%>?_method=DELETE" method="post">

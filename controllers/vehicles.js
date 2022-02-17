@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 // require Vehicle in controllers
 const Vehicle = require('../models/vehicles.js')
+const Service = require('../models/services.js')
 
 // create new vehicle route
 router.post('/', (req, res) => {
@@ -42,13 +43,15 @@ router.get('/new', (req, res) => {
 })
 
 // show vehicle Page
+
 router.get('/:id', (req, res) => {
-  Vehicle.findById(req.params.id, (error, foundVehicle) => {
-    res.render('vehicles/show.ejs', {
-      vehicle: foundVehicle
+    Vehicle.findById(req.params.id, (error, foundVehicle) => {
+      res.render('vehicles/show.ejs', {
+        vehicle: foundVehicle
+      })
     })
   })
-})
+
 
 // show vehicles made on index Page
 router.get('/', (req, res) => {

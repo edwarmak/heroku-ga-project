@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
 	</head>
 	<header>
 		<nav class="nav-bar">
@@ -19,15 +19,17 @@
 		</nav>
 	</header>
 	<body>
-			<h1>Information on your <%=vehicle.make%></h1>
+			<h1>Your <%=vehicle.make%>'s Details</h1>
 		<main>
 			<section>
-				<h2><%=vehicle.year%> <%=vehicle.make%> <%=vehicle.model%></h2>
-				<ul>
-					<li>recent services</li>
-					<li>link to view all services for this vehicle</li>
-				</ul>
+				<h2><%=vehicle.make%> <%=vehicle.model%></h2>
+					<p><%=vehicle.year%> <%=vehicle.color%></p>
 			</section>
+			<div class="">
+				<ul>
+					<li><a href="#">display Service category and service mileage wiht link to service show page</a></li>
+				</ul>
+			</div>
 			<section>
         <form action="/vehicles/<%=vehicle._id%>?_method=DELETE" method="POST">
           <input type="submit" value="Delete Vehicle"/>
