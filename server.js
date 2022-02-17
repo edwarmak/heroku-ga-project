@@ -11,15 +11,19 @@ const mongoose = require('mongoose');
 const vehiclesController = require('./controllers/vehicles.js')
 const servicesController = require('./controllers/services.js')
 const category = require('./models/option.js')
+const Vehicle = require('./models/vehicles.js')
+const Service = require('./models/services.js')
 
 const app = express ();
 const db = mongoose.connection;
 require('dotenv').config()
+
+
 //___________________
 //Port
 //___________________
 // Allow use of Heroku's port or your own local port, depending on the environment
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3000;
 
 //___________________
 //Database
@@ -71,7 +75,7 @@ app.get('/' , (req, res) => {
 //___________________
 //Listener
 //___________________
-
+// Service.collection.drop()
 // Connect to Mongo &
 // Fix Depreciation Warnings from Mongoose
 // May or may not need these depending on your Mongoose version

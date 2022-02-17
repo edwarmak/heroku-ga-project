@@ -2,12 +2,15 @@ const express = require('express')
 const router = express.Router()
 const Service = require('../models/services.js')
 const category = require('../models/option.js')
-// const Vehicle = require('../models/vehicles/')
+const Vehicle = require('../models/vehicles.js')
 
 // render page to add new service
 router.get('/new', (req, res)=>{
-	res.render('services/new.ejs', {
-		categories: category
+	Vehicle.find({}, (error, foundVehicle) => {
+		res.render('services/new.ejs', {
+			categories: category,
+			vehicles: foundVehicle
+		})
 	})
 })
 
@@ -25,7 +28,7 @@ router.delete('/:id', (req, res)=>{
 })
 
 router.get('/:id/edit', (req, res)=>{
-	Service.findById(req.params.id, (err, foundService)=>{
+	Service.findById(req.params.id, (error, foundService)=>{
 		res.render('services/edit.ejs', {
 			service: foundService
 		})
@@ -44,7 +47,7 @@ router.get('/:id', (req, res) => {
 
 // show services that we have created
 router.get('/', (req, res)=>{
-	Service.find({}, (err, foundServices)=>{
+	Service.find({}, (error, foundServices)=>{
 		res.render('services/index.ejs', {
 			services: foundServices
 		})

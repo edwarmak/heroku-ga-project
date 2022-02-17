@@ -28,6 +28,14 @@
 					<li>link to view all services for this vehicle</li>
 				</ul>
 			</section>
+			<section>
+        <form action="/vehicles/<%=vehicle._id%>?_method=DELETE" method="POST">
+          <input type="submit" value="Delete Vehicle"/>
+        </form>
+      </section>
+      <section>
+        <a href="/vehicles/<%=vehicle._id%>/edit">Edit Vehicle</a>
+      </section>
 		</main>
 	</body>
 </html>

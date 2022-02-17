@@ -22,9 +22,10 @@
   <h1><%=service.category%></h1>
     <main>
       <section>
-        <%=service.mileage%>
-        <%=service.date%>
-        <%=service.location%>
+        <%=service.description%><br/>
+        <%=service.mileage%><br/>
+        <%=service.date%><br/>
+        <%=service.location%><br/>
       </section>
       <section>
         <form action="/services/<%=service._id%>?_method=DELETE" method="post">
