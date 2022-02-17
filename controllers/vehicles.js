@@ -34,7 +34,11 @@ router.get('/:id/edit', (req, res) => {
 
 // render our add new vehicle Page
 router.get('/new', (req, res) => {
-  res.render('vehicles/new.ejs')
+  Vehicle.find({}, (error, foundVehicles) => {
+  res.render('vehicles/new.ejs', {
+    vehicles: foundVehicles
+    })
+  })
 })
 
 // show vehicle Page

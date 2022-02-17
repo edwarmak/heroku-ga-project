@@ -9,7 +9,8 @@ const methodOverride  = require('method-override');
 const mongoose = require('mongoose');
 // controller for vehicles index
 const vehiclesController = require('./controllers/vehicles.js')
-const servicesController = require('./controllers/services.js');
+const servicesController = require('./controllers/services.js')
+const category = require('./models/option.js')
 
 const app = express ();
 const db = mongoose.connection;

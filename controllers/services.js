@@ -1,10 +1,14 @@
 const express = require('express')
 const router = express.Router()
 const Service = require('../models/services.js')
+const category = require('../models/option.js')
+// const Vehicle = require('../models/vehicles/')
 
 // render page to add new service
 router.get('/new', (req, res)=>{
-	res.render('services/new.ejs')
+	res.render('services/new.ejs', {
+		categories: category
+	})
 })
 
 router.put('/:id', (req, res)=>{
@@ -28,8 +32,10 @@ router.get('/:id/edit', (req, res)=>{
 	})
 })
 
+// show page
 router.get('/:id', (req, res) => {
   Service.findById(req.params.id, (error, foundService) => {
+		// console.log(foundService)
     res.render('services/show.ejs', {
       service: foundService
     })
