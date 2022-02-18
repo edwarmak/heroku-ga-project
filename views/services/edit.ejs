@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title></title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/public/style.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	</head>
 	<header>
@@ -21,9 +22,9 @@
 			</ul>
 		</nav>
 	</header>
-		</header>
-    	<h1>Edit <%=service.description%>'s Info</h1>
-		<main>
+		<body>
+			<main>
+			<h1>Edit <%=service.description%>'s Info</h1>
       <form action="/services" method="POST">
         Service Description <input type="text" name="description" value="<%=service.description%>"/><br/>
         Mileage Completed <input type="number" name="mileage" value="<%=service.mileage%>"/><br/>

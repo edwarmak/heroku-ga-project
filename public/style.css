@@ -1,7 +1,7 @@
-/* * {
-  background-color: #666370;
+* {
+  background-color: #A9BCD0;
 }
-
+/* nav bar css */
 .nav-bar {
   display: flex;
   justify-content: center;
@@ -9,4 +9,27 @@
 
 .nav-link {
   color: #000500;
-} */
+}
+/* welcome to Maintenance Tracker */
+main {
+  background-color: #A9BCD0;
+}
+
+.page-title {
+  text-align: center;
+  color: #000500;
+}
+
+.links {
+  color: #EAC435;
+}
+
+.col-sm {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  background-color: #666370;
+  padding: 2em 2em;
+  margin: 2em 2em;
+  font-size: 24px;
+}
