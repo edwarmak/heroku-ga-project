@@ -6,7 +6,7 @@ const vehicleSchema = mongoose.Schema({
   model: { type: String, required:true },
   year: { type: Number, required: true },
   color: { type: String },
-  mileage: { type: Number, required:true},
+  mileage: { type: Number, required:true}
 })
 
 const Vehicle = mongoose.model('Vehicle', vehicleSchema)

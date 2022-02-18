@@ -55,16 +55,6 @@ router.get('/', (req, res)=>{
 		})
 	})
 })
-// })
-
-// // show vehicles on services page
-// router.get('/', (req, res)=>{
-// 	Vehicle.find({}, (error, foundVehicles)=>{
-// 		res.render('services/index.ejs', {
-// 			vehicles: foundVehicles
-// 		})
-// 	})
-// })
 
 // create route for new service
 router.post('/', (req, res) => {

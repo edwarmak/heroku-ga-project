@@ -13,7 +13,10 @@
 					<a class="nav-link" href="/">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/vehicles">Vehicle Index</a>
+					<a class="nav-link" href="/vehicles">View Vehicles</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/services">Recent Services</a>
 				</li>
 			</ul>
 		</nav>
@@ -23,20 +26,18 @@
 		<main>
 			<section>
 				<h2><%=vehicle.make%> <%=vehicle.model%></h2>
-					<p><%=vehicle.year%> <%=vehicle.color%></p>
+					<p><%=vehicle.year%> <%=vehicle.color%> <%=vehicle.mileage%></p>
 			</section>
 			<div class="">
-				<ul>
-					<li><a href="#">display Service category and service mileage wiht link to service show page</a></li>
-				</ul>
+				<section>
+					<a href="/vehicles/<%=vehicle._id%>/edit">Edit Vehicle</a>
+					<a href="/services/new">Add New Service</a>
+				</section>
 			</div>
 			<section>
         <form action="/vehicles/<%=vehicle._id%>?_method=DELETE" method="POST">
           <input type="submit" value="Delete Vehicle"/>
         </form>
-      </section>
-      <section>
-        <a href="/vehicles/<%=vehicle._id%>/edit">Edit Vehicle</a>
       </section>
 		</main>
 	</body>
